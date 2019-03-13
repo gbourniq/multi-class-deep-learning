@@ -24,4 +24,6 @@ In this notebook, two multi-class classification algorithms are explored, in ord
 In this step, the goal is to try Deep Learning to conclude if the accuracy of the image classification improves, as Deep Learning and CNNs tend to perform well for complex data such as image. This model achieves an accuracy of 90% and is retained as the best model so far.
 
 ##### 4. Using the Deep Learning model to predict the category of new unseen image data
-Finally, we can use the model created in the previous step and predict the class of new images. The new images will go through the same pre-processing steps before being used by our multi-class classification model.
+Finally, we can use the model created in the previous step and predict the class of new images that were not included in our initial dataset. They will go through the same pre-processing steps before being fed into the classification model.
+
+[Download new images](https://gbourniquestorage.blob.core.windows.net/shared/unseen_images.zip)
