@@ -23,6 +23,8 @@ In this notebook, two multi-class classification algorithms are explored, in ord
 ##### 3. Training of a Deep Learning multi-class classifier with Keras
 In this step, the goal is to try Deep Learning to conclude if the accuracy of the image classification improves, as Deep Learning and CNNs tend to perform well for complex data such as image. This model achieves an accuracy of 90% and is retained as the best model so far.
 
+[Download trained model](https://gbourniquestorage.blob.core.windows.net/shared/gear_classifier.model)
+
 ##### 4. Using the Deep Learning model to predict the category of new unseen image data
 Finally, we can use the model created in the previous step and predict the class of new images that were not included in our initial dataset. They will go through the same pre-processing steps before being fed into the classification model.
 
