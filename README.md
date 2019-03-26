@@ -3,6 +3,7 @@ This is a project to sharpen my knowledge in the following technologies :
 - Python and Jupyter Notebooks
 - Data Science librairies (Pandas and Numpy)
 - Machine Learning and Deep Learning frameworks (Scikit-Learn and Keras using Tensorflow as backend)
+- TensorBoard for Deep Learning model optimisation
 
 As expected, the experiment demonstrates that Deep Learning is significantly more effective for image analysis compared to traditional Machine Learning algorithms.
 
@@ -24,8 +25,21 @@ The dataset data was then converted the numpy arrays and saved as pickle files -
 ##### 2. Training and comparison of two mutli-class classifiers with Scikit-Learn
 In this notebook, two multi-class classification algorithms are explored, in order to predict the category of outdoor gear equipment. The model training step is performed on the equalised 128x128x3 gear data from the previous step. The SVM model achieve a 80% accuracy and appears to be more effective than the Decision Tree algorithm.
 
-##### 3. Training of a Deep Learning multi-class classifier with Keras
-In this step, the goal is to try Deep Learning to conclude if the accuracy of the image classification improves, as Deep Learning and CNNs tend to perform well for complex data such as image. This model achieves an accuracy of 90% and is retained as the best model so far.
+##### 3.1 Training of a Deep Learning multi-class classifier with Keras
+In this step, the goal is to try Deep Learning to conclude if the accuracy of the image classification improves, as Deep Learning and CNNs tend to perform well for complex data such as image. This CNN model with "default" parameters achieves an accuracy of 86% and is more performant than the SVM model.
+
+[Download trained model](https://gbourniquestorage.blob.core.windows.net/shared/gear_classifier.model)
+
+##### 3.2 Optimising the CNN Model with TensorBoard
+The purpose of this Notebook is to train a number of alternative models by changing some basics parameters of the architecture, such as the number of Convolutional Layers, nodes per layer, and dense layers. The Log Dir callback of TensorBoard allows to identify the best model and at which epoch the highest performances is achieved. 
+
+Among the evaluated models, the lowest validation loss was achieved by a model with 1 Convolutional layer, 64 Nodes per layer, and 2 Dense layers, as shown in the following image.
+
+![image](resources/TensorBoard_screenshot.png)
+
+
+
+In this step, the goal is to try Deep Learning to conclude if the accuracy of the image classification improves, as Deep Learning and CNNs tend to perform well for complex data such as image. This CNN model with "default" parameters achieves an accuracy of 86% and is more performant than the SVM model.
 
 [Download trained model](https://gbourniquestorage.blob.core.windows.net/shared/gear_classifier.model)
 
