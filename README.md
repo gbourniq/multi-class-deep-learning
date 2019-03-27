@@ -42,4 +42,4 @@ Among the evaluated models, the lowest validation loss was achieved by a model w
 ##### 4. Using the Deep Learning model to predict the category of new unseen (out of sample) image data
 Finally, we can use the model created in the previous step and predict the class of new out of samples images. They will go through the same pre-processing steps before being fed into the classification model.
 
-[Download new images](https://gbourniquestorage.blob.core.windows.net/shared/out-of-sample-images.zip)
+[Download out of sample images](https://gbourniquestorage.blob.core.windows.net/shared/out-of-sample-images.zip)
