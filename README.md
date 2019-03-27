@@ -28,22 +28,18 @@ In this notebook, two multi-class classification algorithms are explored, in ord
 ##### 3.1 Training of a Deep Learning multi-class classifier with Keras
 In this step, the goal is to try Deep Learning to conclude if the accuracy of the image classification improves, as Deep Learning and CNNs tend to perform well for complex data such as image. This CNN model with "default" parameters achieves an accuracy of 86% and is more performant than the SVM model.
 
-[Download trained model](https://gbourniquestorage.blob.core.windows.net/shared/gear_classifier.model)
+[Download CNN model](https://gbourniquestorage.blob.core.windows.net/shared/64x2-CNN.model)
 
 ##### 3.2 Optimising the CNN Model with TensorBoard
 The purpose of this Notebook is to train a number of alternative models by changing some basics parameters of the architecture, such as the number of Convolutional Layers, nodes per layer, and dense layers. The Log Dir callback of TensorBoard allows to identify the best model and at which epoch the highest performances is achieved. 
 
-Among the evaluated models, the lowest validation loss was achieved by a model with 1 Convolutional layer, 64 Nodes per layer, and 2 Dense layers, as shown in the following image.
+Among the evaluated models, the lowest validation loss was achieved by a model with 1 Convolutional layer, 64 Nodes per layer, and 2 Dense layers, as shown in the following image. This was kept as the best model so far.
 
 ![image](resources/TensorBoard_screenshot.png)
 
+[Download best CNN model](https://gbourniquestorage.blob.core.windows.net/shared/64x1-2-CNN.model)
 
+##### 4. Using the Deep Learning model to predict the category of new unseen (out of sample) image data
+Finally, we can use the model created in the previous step and predict the class of new out of samples images. They will go through the same pre-processing steps before being fed into the classification model.
 
-In this step, the goal is to try Deep Learning to conclude if the accuracy of the image classification improves, as Deep Learning and CNNs tend to perform well for complex data such as image. This CNN model with "default" parameters achieves an accuracy of 86% and is more performant than the SVM model.
-
-[Download trained model](https://gbourniquestorage.blob.core.windows.net/shared/gear_classifier.model)
-
-##### 4. Using the Deep Learning model to predict the category of new unseen image data
-Finally, we can use the model created in the previous step and predict the class of new images that were not included in our initial dataset. They will go through the same pre-processing steps before being fed into the classification model.
-
-[Download new images](https://gbourniquestorage.blob.core.windows.net/shared/unseen_images.zip)
+[Download new images](https://gbourniquestorage.blob.core.windows.net/shared/out-of-sample-images.zip)
